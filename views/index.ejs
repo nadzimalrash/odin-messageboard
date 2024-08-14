@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Mini Message Board</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <h1><%= title %></h1>
+        <ul>
+          <% messages.forEach((message) => { %>
+            <li>
+              User: <%= message.user %><br/>
+              Text: <%= message.text %><br/>
+              Date added: <%= message.added %><br/>
+              <button>Open</button>
+            </li>
+          <% }); %>
+        </ul>
+        <a href="/new">New message</a>
+    </body>
+</html>
